@@ -42,7 +42,7 @@ describe("countWords", () => {
     expect(result).toBe(0);
   });
 
-  test("should return 3", () => {
+  test(`should return 3 for "hello from vitest"`, () => {
     const result = countWords("hello from vitest");
 
     expect(result).toBe(3);
