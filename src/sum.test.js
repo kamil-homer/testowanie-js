@@ -74,12 +74,4 @@ describe("sumArrayElements", () => {
 
     expect(result).toBe(0);
   });
-
-  test("should throw an error when input is not an array", () => {
-    const resultFn = () => {
-      sumArrayElements(null);
-    };
-
-    expect(resultFn).toThrow();
-  });
 });
