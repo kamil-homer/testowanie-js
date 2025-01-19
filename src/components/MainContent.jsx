@@ -281,7 +281,7 @@ export const MainContent = () => {
       </Box>
       <Grid container spacing={2} columns={12}>
         {visiblePosts.map((post) => (
-          <Grid size={{ xs: 12, md: 4 }} key={post.title}>
+          <Grid size={{ xs: 12, md: 4 }} key={post.id}>
             <SyledCard
               variant="outlined"
               onFocus={() => handleFocus(2)}
