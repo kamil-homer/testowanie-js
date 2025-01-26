@@ -77,7 +77,7 @@ const posts = [
   },
 ];
 
-const SyledCard = styled(Card)(({ theme }) => ({
+const StyledCard = styled(Card)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   padding: 0,
@@ -94,7 +94,7 @@ const SyledCard = styled(Card)(({ theme }) => ({
   },
 }));
 
-const SyledCardContent = styled(CardContent)({
+const StyledCardContent = styled(CardContent)({
   display: "flex",
   flexDirection: "column",
   gap: 4,
@@ -282,7 +282,7 @@ export const MainContent = () => {
       <Grid container spacing={2} columns={12}>
         {visiblePosts.map((post) => (
           <Grid size={{ xs: 12, md: 4 }} key={post.id}>
-            <SyledCard
+            <StyledCard
               variant="outlined"
               onFocus={() => handleFocus(2)}
               onBlur={handleBlur}
@@ -299,7 +299,7 @@ export const MainContent = () => {
                   aspectRatio: { sm: "16 / 9", md: "" },
                 }}
               />
-              <SyledCardContent>
+              <StyledCardContent>
                 <Typography gutterBottom variant="caption" component="div">
                   {post.tag}
                 </Typography>
@@ -313,9 +313,9 @@ export const MainContent = () => {
                 >
                   {post.description}
                 </StyledTypography>
-              </SyledCardContent>
+              </StyledCardContent>
               <Author authors={post.authors} />
-            </SyledCard>
+            </StyledCard>
           </Grid>
         ))}
       </Grid>
