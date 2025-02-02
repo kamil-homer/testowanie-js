@@ -2,7 +2,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import AppTheme from "./theme/AppTheme";
 
-import { Navigation } from "./components/Navigation";
+import { BlogNavigation } from "./components/BlogNavigation/BlogNavigation";
 import { MainContent } from "./components/MainContent";
 
 export const Blog = (props) => {
@@ -10,7 +10,7 @@ export const Blog = (props) => {
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
 
-      <Navigation />
+      <BlogNavigation />
 
       <Container
         maxWidth="lg"
