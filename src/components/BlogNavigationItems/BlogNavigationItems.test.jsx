@@ -27,3 +27,13 @@ describe("BlogNavigationItems", () => {
     expect(menuItem).toBeInTheDocument();
   });
 });
+
+describe("BlogNavigationItems snapshots", () => {
+  test("should render correct strucutre for desktop", () => {
+    const { asFragment } = render(
+      <BlogNavigationItems menuType={MENU_TYPE.DESKTOP} />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+});

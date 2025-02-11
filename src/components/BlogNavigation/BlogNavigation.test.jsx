@@ -1,23 +1,20 @@
-import { describe, expect, test } from "vitest";
+import { describe, expect, test, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { BlogNavigation } from "./BlogNavigation";
 import userEvent from "@testing-library/user-event";
+import { BlogNavigation } from "./BlogNavigation";
 
 describe("BlogNavigation", () => {
-  test("Features present in the navigation", () => {
-    const navElement = "Features";
-
-    render(<BlogNavigation />);
-
-    expect(screen.getByText(navElement)).toBeInTheDocument();
+  vi.mock("../BlogNavigationItems/BlogNavigationItems", () => {
+    return {
+      BlogNavigationItems: () => <div>BlogNavigationItems</div>,
+      MENU_TYPE: {},
+    };
   });
 
-  test("should display all 9 buttons", () => {
-    const expectedElements = 9;
+  test("Should match the snapshot", () => {
+    const { asFragment } = render(<BlogNavigation />);
 
-    render(<BlogNavigation />);
-
-    expect(screen.getAllByRole("button").length).toBe(expectedElements);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test("Should display 'Hello, username' after clicking on 'Sign in' button", async () => {
