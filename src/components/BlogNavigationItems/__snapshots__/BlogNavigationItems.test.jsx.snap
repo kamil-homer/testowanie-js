@@ -1,0 +1,54 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BlogNavigationItems snapshots > should render correct strucutre for desktop 1`] = `
+<DocumentFragment>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInfo MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInfo css-1cn90u7-MuiButtonBase-root-MuiButton-root"
+    id=":r6:"
+    tabindex="0"
+    type="button"
+  >
+    Features
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInfo MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInfo css-1cn90u7-MuiButtonBase-root-MuiButton-root"
+    id=":r7:"
+    tabindex="0"
+    type="button"
+  >
+    Testimonials
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInfo MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInfo css-1cn90u7-MuiButtonBase-root-MuiButton-root"
+    id=":r8:"
+    tabindex="0"
+    type="button"
+  >
+    Highlights
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInfo MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInfo css-1cn90u7-MuiButtonBase-root-MuiButton-root"
+    id=":r9:"
+    tabindex="0"
+    type="button"
+  >
+    Pricing
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInfo MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInfo css-1cn90u7-MuiButtonBase-root-MuiButton-root"
+    id=":ra:"
+    tabindex="0"
+    type="button"
+  >
+    FAQ
+  </button>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInfo MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInfo css-1cn90u7-MuiButtonBase-root-MuiButton-root"
+    id=":rb:"
+    tabindex="0"
+    type="button"
+  >
+    Blog
+  </button>
+</DocumentFragment>
+`;
