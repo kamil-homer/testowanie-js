@@ -1,5 +1,6 @@
 import { Button, MenuItem } from "@mui/material";
 import { useState } from "react";
+import { loginUser } from "../../services/auth";
 
 export const MENU_TYPE = {
   MOBILE: "mobile",
@@ -7,21 +8,33 @@ export const MENU_TYPE = {
 };
 
 export const UserLogin = ({ menuType = MENU_TYPE.DESKTOP }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [user, setUser] = useState(null);
+  const [loginError, setLoginError] = useState(null);
+
+  const login = async () => {
+    setIsLoading(true);
+
+    const userAccount = await loginUser();
+
+    if (userAccount.data !== null) {
+      setUser(userAccount.data);
+    } else if (userAccount.error !== null) {
+      setLoginError(userAccount.error);
+    }
+
+    setIsLoading(false);
+  };
 
   if (menuType === MENU_TYPE.DESKTOP) {
     return (
       <>
-        {isLoggedIn ? (
-          <span>Hello, username</span>
-        ) : (
+        {user && <span>Hello, {user.name}</span>}
+        {loginError && <span>Error: {loginError}</span>}
+        {isLoading && <span>Logging in...</span>}
+        {!user && !loginError && !isLoading && (
           <>
-            <Button
-              color="primary"
-              variant="text"
-              size="small"
-              onClick={() => setIsLoggedIn(true)}
-            >
+            <Button color="primary" variant="text" size="small" onClick={login}>
               Sign in
             </Button>
             <Button color="primary" variant="contained" size="small">
@@ -34,9 +47,10 @@ export const UserLogin = ({ menuType = MENU_TYPE.DESKTOP }) => {
   } else if (menuType === MENU_TYPE.MOBILE) {
     return (
       <>
-        {isLoggedIn ? (
-          <span>Hello, username</span>
-        ) : (
+        {user && <span>Hello, {user.name}</span>}
+        {loginError && <span>Error: {loginError}</span>}
+        {isLoading && <span>Logging in...</span>}
+        {!user && !loginError && !isLoading && (
           <>
             <MenuItem>
               <Button color="primary" variant="contained" fullWidth>
