@@ -3,11 +3,9 @@ import { alpha, styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
-import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
@@ -15,6 +13,7 @@ import {
   BlogNavigationItems,
   MENU_TYPE,
 } from "../BlogNavigationItems/BlogNavigationItems";
+import { UserLogin } from "../UserLogin/UserLogin";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
@@ -33,7 +32,6 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 }));
 
 export const BlogNavigation = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -67,23 +65,7 @@ export const BlogNavigation = () => {
               alignItems: "center",
             }}
           >
-            {isLoggedIn ? (
-              <span>Hello, username</span>
-            ) : (
-              <>
-                <Button
-                  color="primary"
-                  variant="text"
-                  size="small"
-                  onClick={() => setIsLoggedIn(true)}
-                >
-                  Sign in
-                </Button>
-                <Button color="primary" variant="contained" size="small">
-                  Sign up
-                </Button>
-              </>
-            )}
+            <UserLogin menuType={MENU_TYPE.DESKTOP} />
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" }, gap: 1 }}>
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
@@ -112,16 +94,7 @@ export const BlogNavigation = () => {
                 </Box>
                 <BlogNavigationItems menuType={MENU_TYPE.MOBILE} />
                 <Divider sx={{ my: 3 }} />
-                <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
-                    Sign up
-                  </Button>
-                </MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="outlined" fullWidth>
-                    Sign in
-                  </Button>
-                </MenuItem>
+                <UserLogin menuType={MENU_TYPE.MOBILE} />
               </Box>
             </Drawer>
           </Box>

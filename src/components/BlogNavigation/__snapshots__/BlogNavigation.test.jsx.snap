@@ -26,22 +26,9 @@ exports[`BlogNavigation > Should match the snapshot 1`] = `
         <div
           class="MuiBox-root css-h10f7z"
         >
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary css-1ccsd5i-MuiButtonBase-root-MuiButton-root"
-            id=":r0:"
-            tabindex="0"
-            type="button"
-          >
-            Sign in
-          </button>
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-tw6tsg-MuiButtonBase-root-MuiButton-root"
-            id=":r1:"
-            tabindex="0"
-            type="button"
-          >
-            Sign up
-          </button>
+          <div>
+            UserLogin
+          </div>
         </div>
         <div
           class="MuiBox-root css-zkjl6t"
@@ -49,7 +36,7 @@ exports[`BlogNavigation > Should match the snapshot 1`] = `
           <button
             aria-label="Menu button"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-53g0n7-MuiButtonBase-root-MuiIconButton-root"
-            id=":r2:"
+            id=":r0:"
             tabindex="0"
             type="button"
           >
