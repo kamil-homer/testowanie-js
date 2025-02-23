@@ -29,7 +29,7 @@ describe("BlogNavigationItems", () => {
 });
 
 describe("BlogNavigationItems snapshots", () => {
-  test("should render correct strucutre for desktop", () => {
+  test("should render correct structure for desktop", () => {
     const { asFragment } = render(
       <BlogNavigationItems menuType={MENU_TYPE.DESKTOP} />
     );
